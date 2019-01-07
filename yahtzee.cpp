@@ -4,14 +4,14 @@
 #include <stdlib.h>
 
 int main(){
-        int R1, R2, R3, R4, R5;
-        int attempts = 0;
+        int R1, R2, R3, R4, R5;  //creates 5 variabless representing dice
+        int attempts = 0;        //counter for number of rolls
         srand (time(NULL));
 
 
 
         do {
-                R1 = (rand() % 6 + 1);
+                R1 = (rand() % 6 + 1);  //generates a random number between 1 and 6 stored in r1 - r5
                 std::cout << R1 << " ";
 
                 R2 = (rand() % 6 + 1);
@@ -27,7 +27,7 @@ int main(){
                 std::cout << R5 << " " << std::endl;
 
 
-                if ((R1 == R2) && (R1 == R3) && (R1 == R4) && (R1 == R5)){
+                if ((R1 == R2) && (R1 == R3) && (R1 == R4) && (R1 == R5)){   //checks if all dice are equal
                         std::cout << "Yahtzee!!!! after " << attempts << " rolls";
                         break;
                 }
@@ -36,7 +36,7 @@ int main(){
                         attempts++;;
                 }
         }
-        while ((R1 != R2) || (R1 != R3) || (R1 != R4) || (R1 != R5));
+        while ((R1 != R2) || (R1 != R3) || (R1 != R4) || (R1 != R5));  //loops if dice are not all equal
 }
 
 
